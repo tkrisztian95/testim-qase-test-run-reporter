@@ -4,6 +4,7 @@
   "description": "Reporting test run results from Testim to the Qase TMS",
   "main": "app.js",
   "scripts": {
+    "start": "node ./src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Krisztian Gyula Toth",

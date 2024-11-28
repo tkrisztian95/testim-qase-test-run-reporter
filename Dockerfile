@@ -8,8 +8,8 @@ COPY package*.json ./
 
 USER node
 
-RUN npm install
+RUN npm ci --omit=dev
 
-COPY --chown=node:node . .
+COPY --chown=node:node src/ .
 
 CMD [ "node", "app.js" ]
