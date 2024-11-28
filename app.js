@@ -144,13 +144,13 @@ async function completeTestRunResultInQase(projectCode, runId) {
 async function syncTestimWithQase() {
   try {
     const allTests = await getAllTestsFromTestim();
-    if (allTests.length === 0) {
+    if (!allTests || allTests.length === 0) {
       logger.info("Skipping sync because there is no information about Testim tests!")
       return;
     }
 
     const executions = await getExecutionsFromTestim();
-    if (executions.length === 0) {
+    if (!executions || executions.length === 0) {
       logger.info("Skipping sync because there is no information about Testim test executions!")
       return;
     }
