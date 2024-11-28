@@ -2,7 +2,7 @@
 
 This application serves an integration purpose between [Testim.io](https://www.testim.io/) and [Qase.io](https://app.qase.io/). It creates test runs and results in Qase projects from the Testim test executions.
 
-_Note: This is custom solution for a requested integration between the above mentioned systems. Also vote for feature request https://roadmap.qase.io/feature-requests/p/testim-integration_
+_Note: This is custom solution for a requested integration between the above mentioned systems. Also vote for feature request <https://roadmap.qase.io/feature-requests/p/testim-integration>_
 
 In order to find matching test cases and for successful test run result creation in Qase:
 
@@ -46,7 +46,14 @@ export QASE_APIKEY="Add api key..."
 // Optional
 export CRON_SCHEDULE_OVERRIDE="*/5 * * * *"
 ```
+
 _Note: Always keep your API keys secure!_
+
+Install Node modules:
+
+```ps
+npm install
+```
 
 Start application by command:
 
@@ -93,5 +100,6 @@ Licensed under GNU General Public License v3.0 or later.
 Copyright (c) 2024 Krisztian Toth & Acrolinx GmbH
 
 **Notes:**
+
 - This project was written at and with support from [Acrolinx](https://www.acrolinx.com/) GmbH.
 - This project is not an official Acrolinx open-source package. For official Acrolinx open-source projects see the [GitHub page](https://github.com/acrolinx/) from Acrolinx.
