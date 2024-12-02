@@ -91,7 +91,10 @@ async function syncTestimWithQase() {
         // Create test run results for each tests from the execution
         for (const test of testsInExecution) {
           const matchingLabels = test.labels.filter(l => l.startsWith("qase/" + projectCode + "-"))
-          if (matchingLabels.length === 1) {
+          if (matchingLabels.length === 0) {
+            continue // skip
+          }
+          if (matchingLabels.length > 1) {
             logger.child({ matchingLabels }).warn('Test \'' + test._id + '\' in Testim must have exactly one label for linking with a test case in Qase!')
             continue
           }
