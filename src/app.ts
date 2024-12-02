@@ -36,7 +36,7 @@ async function syncTestimWithQase() {
       return;
     }
 
-    logger.info('There are \'' + executions.length + '\' executions found in Testim for today!')
+    logger.info('There are \'' + executions.length + '\' executions found in Testim for today yet!')
 
     for (const element of executions) {
       const executionId = element.executionId;
@@ -57,7 +57,7 @@ async function syncTestimWithQase() {
       const projectCode = element.resultLabels.filter(l => l.startsWith('qase/'))[0].split('/')[1]
 
       let child = logger.child({ executionId })
-      child.info('Processing Testim execution')
+      child.info('Processing Testim execution with id \'' + executionId + '\'')
 
       const details = await tesitm.v2.pollExecutionDetails(executionId);
 
