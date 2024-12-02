@@ -10,6 +10,6 @@ USER node
 
 RUN npm ci --omit=dev
 
-COPY --chown=node:node src/ .
+COPY --chown=node:node dist/ .
 
 CMD [ "node", "app.js" ]
