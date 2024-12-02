@@ -55,10 +55,16 @@ Install Node modules:
 npm install
 ```
 
+Build the app with TypeScript:
+
+```ps
+npm run build
+```
+
 Start application by command:
 
 ```ps
-node app.js
+npm run start
 ```
 
 For development also use `pino-pretty`, it will format the log output:

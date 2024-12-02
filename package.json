@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "compile": "tsc -p ./tsconfig.json --noEmit",
-    "start": "node ./src/app.js",
+    "build": "tsc",
+    "dev": "npx tsx ./src/app.ts",
+    "start": "node ./dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Krisztian Gyula Toth",
