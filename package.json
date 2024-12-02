@@ -4,6 +4,10 @@
   "description": "Reporting test run results from Testim to the Qase TMS",
   "main": "app.js",
   "scripts": {
+    "compile": "tsc -p ./tsconfig.json --noEmit",
+    "build": "tsc",
+    "dev": "npx tsx ./src/app.ts",
+    "start": "node ./dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Krisztian Gyula Toth",
@@ -13,5 +17,10 @@
     "node-schedule": "^2.1.1",
     "pino": "^9.5.0",
     "testim-qase-test-run-reporter": "file:"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/node-schedule": "^2.1.7",
+    "typescript": "^5.7.2"
   }
 }

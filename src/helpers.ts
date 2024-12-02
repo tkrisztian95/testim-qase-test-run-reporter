@@ -4,9 +4,9 @@
 /** 
  * Return date in format `YYYY-MM-DD HH-mm-ss` 
  */
-function formatDateToYMDHIS(isoDateString) {
+export const formatDateToYMDHIS = (isoDateString: string): string => {
 
-  var options = {
+  var options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'numeric',
     day: 'numeric',
@@ -17,5 +17,3 @@ function formatDateToYMDHIS(isoDateString) {
 
   return new Intl.DateTimeFormat('sv-SE', options).format(new Date(isoDateString))
 }
-
-module.exports.formatDateToYMDHIS = formatDateToYMDHIS
